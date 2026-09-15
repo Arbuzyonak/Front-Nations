@@ -1,15 +1,14 @@
 import sys
 import os
-env = Environment()
 
-env.Append(CPPPATH=["godot-cpp/include", "godot-cpp/gen/include", "src"])
+env=SConscript("godot-cpp/SConstruct", {"api_version": "4.7"})
 
-if sys.platform == "win32":
-    env.Append(CCFLAGS=["/EHs", "/GR", "/GF"])
-    target_path = "bin/godot-cpp.windows.template_debug.x86_64.dll"
-else:
-    env.Append(CCFLAGS=["-fPIC", "-O3", "-std=c++17"])
-    target_path = "bin/godot-cpp.linux.template_debug.x86_64.so"
+env.Append(CPPPATH=["src/"])
+sources=Glob("src/*.cpp")
 
-sources = Glob("src/*.cpp")
-env.SharedLibrary(target=target_path, source=sources)
+library = env.SharedLibrary(
+    "bin/libfrontnations{}{}".format(env["suffix"], env["SHLIBSUFFIX"]),
+    source=sources,
+)
+
+Default(library)

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bmaut2w2na2xi"]
+[node name="Main" type="FrontNations" unique_id=1918344304]
+[node name="LineEdit" type="LineEdit" parent="." unique_id=163926973]
+offset_left = 363.0
+offset_top = 291.0
+offset_right = 825.0
+offset_bottom = 463.0
+text = "Hello, what is this?"
+alignment = 1
+editable = false
+[node name="Label" type="Label" parent="." unique_id=2146463676]
+offset_left = 514.0
+offset_top = 210.0
+offset_right = 709.0
+offset_bottom = 276.0
+text = "Front Nations"
