@@ -1,0 +1,6 @@
+godot-cpp/
+bin/
+build/
+*.iml
+.idea/
+.sconsign.dblite
