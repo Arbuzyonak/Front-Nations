@@ -1,0 +1,19 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Front Nations"
+run/main_scene="uid://bmaut2w2na2xi"
+config/features=PackedStringArray("4.7")
+
+[layer_names]
+
+2d_physics/layer1="World"
